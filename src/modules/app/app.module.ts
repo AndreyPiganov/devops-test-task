@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import configuration from '../../config/configuration';
-import { validateEnvironment } from '../../config/environment.validation';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import configuration from '../../config/configuration.js';
+import { validateEnvironment } from '../../config/environment.validation.js';
+import { AppController } from './app.controller.js';
+import { AppService } from './app.service.js';
 
 @Module({
   imports: [

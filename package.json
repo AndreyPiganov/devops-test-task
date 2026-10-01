@@ -2,6 +2,7 @@
   "name": "devops-test-task",
   "version": "0.0.1",
   "description": "NestJS service for a DevOps test task",
+  "type": "module",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
