@@ -19,7 +19,7 @@ describe('AppController (e2e)', () => {
     return request(app.getHttpServer()).get('/').expect(200).expect({
       name: 'devops-test-task',
       status: 'running',
-      health: '/health',
+      health: '/healthzz',
     });
   });
 
