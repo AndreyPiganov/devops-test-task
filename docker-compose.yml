@@ -1,7 +1,7 @@
 services:
   app:
     build:
-      scontext: .
+      context: .
       target: ${NODE_ENV:-development}
     environment:
       NODE_ENV: ${NODE_ENV:-development}
