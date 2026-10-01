@@ -1,0 +1,18 @@
+services:
+  app:
+    build:
+      context: .
+      target: ${NODE_ENV:-development}
+    environment:
+      NODE_ENV: ${NODE_ENV:-development}
+      HOST: ${HOST:-0.0.0.0}
+      PORT: ${PORT:-5000}
+    ports:
+      - '${PORT:-5000}:${PORT:-5000}'
+    healthcheck:
+      test: ['CMD-SHELL', 'wget --spider -q http://127.0.0.1:$${PORT}/health']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped
